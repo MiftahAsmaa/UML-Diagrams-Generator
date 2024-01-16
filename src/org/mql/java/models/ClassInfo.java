@@ -1,43 +1,41 @@
 package org.mql.java.models;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class ClassInfo {
+public class ClassInfo{
 
 	   private String className;
-	    private List<String> fields;
+	   private String classType;
+	    private List<FieldInfo> fields;
+	    private List<MethodInfo> methods;
+	    private Map<String, String> relations= new HashMap<>();
 
-	    public ClassInfo parseClass(Class<?> classe) {
-	        String className = classe.getName();
-	        Field[] fields = classe.getDeclaredFields();
-	        ClassInfo classInfo = new ClassInfo(className, getFields(fields));
-	        return classInfo;
-	    }
-	    
-
-	    private List<String> getFields(Field[] fields) {
-	        List<String> fieldNames = new ArrayList<>();
-	        for (Field field : fields) {
-	            fieldNames.add(field.getName());
-	        }
-	        return fieldNames;
-	    }
-	    
 	   
-	    
-	    
-		public ClassInfo(String className, List<String> fields) {
-	        this.className = className;
+		public ClassInfo(String className,String classType, List<FieldInfo> fields, List<MethodInfo> methods) {
+			this.className = className;
+			this.setClassType(classType);
 	        this.fields = fields;
-	    }
+	        this.setMethods(methods);
+		}
+
+
+		public void addRelation(String className, String relationType) {
+			relations.put(className, relationType);
+		}
+		
+		public void displayRelations() {
+			for (Map.Entry<String, String> entry : relations.entrySet()) {
+				System.out.println("   " + entry.getValue() + ": " + entry.getKey());
+			}
+		}
 	
-		public List<String> getFields() {
+		public List<FieldInfo> getFields() {
 			return fields;
 		}
 
-		public void setFields(List<String> fields) {
+		public void setFields(List<FieldInfo> fields) {
 			this.fields = fields;
 		}
 
@@ -50,5 +48,24 @@ public class ClassInfo {
 		public void setClassName(String className) {
 			this.className = className;
 		}
-		
+
+		public List<MethodInfo> getMethods() {
+			return methods;
+		}
+
+		public void setMethods(List<MethodInfo> methods) {
+			this.methods = methods;
+		}
+
+
+		public String getClassType() {
+			return classType;
+		}
+
+
+		public void setClassType(String classType) {
+			this.classType = classType;
+		}
+	
+
 }

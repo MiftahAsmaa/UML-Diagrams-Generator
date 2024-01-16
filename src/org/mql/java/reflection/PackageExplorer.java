@@ -1,7 +1,10 @@
 package org.mql.java.reflection;
 
 import java.io.File;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
 
 import org.mql.java.models.ClassInfo;
@@ -13,39 +16,54 @@ public class PackageExplorer {
 
 	}
 	
-    public static PackageInfo parsePackage(String packageName) {
-        try {
-            List<ClassInfo> classes = findClasses(packageName);
+	public static PackageInfo parsePackage(String packageName, String projectPath) {
+	    try {
+	        List<ClassInfo> classes = findClasses(packageName, projectPath);
+	        return new PackageInfo(packageName, classes);
+	    } catch (Exception e) {
+	        System.out.println("Error : " + e.getMessage());
+	    }
+	    return null;
+	}
 
-            return new PackageInfo(packageName, classes);
-        } catch (Exception e) {
-            System.out.println("Erreur : " + e.getMessage());
-            return null; 
-        }
-    }
-    
-    private static List<ClassInfo> findClasses(String packageName) {
-        List<ClassInfo> classInfos = new ArrayList<>();
-        try {
-            String classPath = System.getProperty("java.class.path");
-            String packageFolder = packageName.replace('.', File.separatorChar);
-            File classDir = new File(classPath + File.separator + packageFolder);
-            if (classDir.exists()) {
-            	
-                File[] classFiles = classDir.listFiles((dir, name) -> name.endsWith(".class"));
-                if (classFiles != null) {
-                    for (File classFile : classFiles) {
-                        String className = packageName + '.' + classFile.getName().replace(".class", "");
-                        Class<?> classe = Class.forName(className);
-                        classInfos.add(ClassExplorer.parseClass(classe));
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return classInfos;
-    }
+	public static List<ClassInfo> findClasses(String packageName, String projectPath) {
+	    List<ClassInfo> classInfos = new ArrayList<>();
+	    try {
+	        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+	        String packagePath = packageName.replace('.', File.separatorChar);
+	        String bin = projectPath.replace("src", "bin");
+
+	        bin = bin.endsWith(File.separator + "bin") ? bin : bin + File.separator + "bin";
+
+	        URLClassLoader urlClassLoader = new URLClassLoader(
+	                new URL[]{new File(bin).toURI().toURL()},
+	                classLoader
+	        );
+
+	        Enumeration<URL> resources = urlClassLoader.getResources(packagePath);
+	        while (resources.hasMoreElements()) {
+	            URL resource = resources.nextElement();
+	            if (resource.getProtocol().equals("file")) {
+	                File classDir = new File(resource.toURI());
+	                if (classDir.exists()) {
+	                    File[] classFiles = classDir.listFiles((dir, name) -> name.endsWith(".class"));
+	                    if (classFiles != null) {
+	                        for (File classFile : classFiles) {
+	                            String className = packageName + '.' + classFile.getName().replace(".class", "");
+	                            Class<?> classe = urlClassLoader.loadClass(className);
+	                            classInfos.add(ClassExplorer.parseClass(classe));
+	                            
+	                        }
+	                    }
+	                }
+	            }
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return classInfos;
+	}
    
 
 	
