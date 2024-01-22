@@ -337,10 +337,10 @@
           <field modifier="private" name="w" type="String"/>
         </fields>
         <methods>
-          <method modifier="public" name="testProperties" returnType="void"/>
-          <method modifier="public" name="testHashTable" returnType="void"/>
-          <method modifier="public" name="testTreeMap" returnType="void"/>
           <method modifier="public" name="testHashMap" returnType="void"/>
+          <method modifier="public" name="testHashTable" returnType="void"/>
+          <method modifier="public" name="testProperties" returnType="void"/>
+          <method modifier="public" name="testTreeMap" returnType="void"/>
         </methods>
         <Relations>
           <Realation sourceClass="Test2" targetClass="String" type="COMPOSITION"/>
@@ -360,12 +360,12 @@
           <field modifier="private" name="w" type="String"/>
         </fields>
         <methods>
+          <method modifier="public" name="testStringBuffer" returnType="void"/>
           <method modifier="public" name="testStringBuilder" returnType="void"/>
           <method modifier="public" name="testArrayList" returnType="void"/>
-          <method modifier="public" name="testLinkedList" returnType="void"/>
-          <method modifier="public" name="testVector" returnType="void"/>
           <method modifier="public" name="testString" returnType="void"/>
-          <method modifier="public" name="testStringBuffer" returnType="void"/>
+          <method modifier="public" name="testVector" returnType="void"/>
+          <method modifier="public" name="testLinkedList" returnType="void"/>
         </methods>
         <Relations>
           <Realation sourceClass="Tests" targetClass="String" type="COMPOSITION"/>
