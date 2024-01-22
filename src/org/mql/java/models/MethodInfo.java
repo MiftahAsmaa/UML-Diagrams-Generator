@@ -4,11 +4,13 @@ import java.util.List;
 
 public class MethodInfo {
     private String methodName;
+    private String methodModifier;
     private String returnType;
     private List<String> parameters;
 
-    public MethodInfo(String methodName, String returnType, List<String> parameters) {
+    public MethodInfo(String methodName,String methodModifier, String returnType, List<String> parameters) {
         this.methodName = methodName;
+        this.methodModifier = methodModifier;
         this.returnType = returnType;
         this.parameters = parameters;
     }
@@ -24,4 +26,12 @@ public class MethodInfo {
     public List<String> getParameters() {
         return parameters;
     }
+
+	public String getMethodModifier() {
+		return methodModifier;
+	}
+
+	public void setMethodModifier(String methodModifier) {
+		this.methodModifier = methodModifier;
+	}
 }

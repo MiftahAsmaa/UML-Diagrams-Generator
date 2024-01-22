@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xmi:XMI xmlns:xmi="http://www.omg.org/XMI" xmlns:uml="http://www.omg.org/spec/UML/20090901">
+  <uml:Project>
+    <uml:Name>p01-revision</uml:Name>
+    <uml:Packages>
+      <uml:Package name="org.mql.java.reef">
+        <uml:Enum name="enuuuum">
+          <uml:Constructors>
+            <uml:Constuctor modifier="private" name="enuuuum">
+              <uml:Parameters>
+                <uml:Parameter type="String"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="String"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="VALUE1" type="enuuuum"/>
+          <uml:Attribute name="VALUE2" type="enuuuum"/>
+          <uml:Attribute name="VALUE3" type="enuuuum"/>
+          <uml:Attribute name="description" type="String"/>
+          <uml:Attribute name="ENUM$VALUES" type="enuuuum[]"/>
+          <uml:Operation name="main" returnType="void">
+            <uml:Parameter name="param" type="String[]"/>
+          </uml:Operation>
+          <uml:Operation name="values" returnType="enuuuum[]"/>
+          <uml:Operation name="valueOf" returnType="enuuuum">
+            <uml:Parameter name="param" type="String"/>
+          </uml:Operation>
+          <uml:Operation name="getDescription" returnType="String"/>
+        </uml:Enum>
+        <uml:Interface name="inter"/>
+      </uml:Package>
+      <uml:Package name="org.mql.java.revision">
+        <uml:Class name="Circle">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Circle">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Circle">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Circle">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="x" type="int"/>
+          <uml:Attribute name="y" type="int"/>
+          <uml:Attribute name="r" type="int"/>
+          <uml:Attribute name="color" type="Color"/>
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="Circle" targetClass="Shape" type="IMPLEMENTATION"/>
+            <uml:Realation sourceClass="Circle" targetClass="Color" type="COMPOSITION"/>
+            <uml:Realation sourceClass="Circle" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Examples">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Examples"/>
+          </uml:Constructors>
+          <uml:Operation name="main" returnType="void">
+            <uml:Parameter name="param" type="String[]"/>
+          </uml:Operation>
+          <uml:Operation name="exp01" returnType="void"/>
+          <uml:Relations>
+            <uml:Realation sourceClass="Examples" targetClass="String[]" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Ligne">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Ligne">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Ligne">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="x" type="int"/>
+          <uml:Attribute name="y" type="int"/>
+          <uml:Attribute name="with" type="int"/>
+          <uml:Attribute name="height" type="int"/>
+          <uml:Attribute name="color" type="Color"/>
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="Ligne" targetClass="Shape" type="IMPLEMENTATION"/>
+            <uml:Realation sourceClass="Ligne" targetClass="Color" type="COMPOSITION"/>
+            <uml:Realation sourceClass="Ligne" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Oval">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Oval">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Oval">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="x" type="int"/>
+          <uml:Attribute name="y" type="int"/>
+          <uml:Attribute name="width" type="int"/>
+          <uml:Attribute name="height" type="int"/>
+          <uml:Attribute name="color" type="Color"/>
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="Oval" targetClass="Shape" type="IMPLEMENTATION"/>
+            <uml:Realation sourceClass="Oval" targetClass="Color" type="COMPOSITION"/>
+            <uml:Realation sourceClass="Oval" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Rectangle">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Rectangle">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Rectangle">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="x" type="int"/>
+          <uml:Attribute name="y" type="int"/>
+          <uml:Attribute name="with" type="int"/>
+          <uml:Attribute name="height" type="int"/>
+          <uml:Attribute name="color" type="Color"/>
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="Rectangle" targetClass="Shape" type="IMPLEMENTATION"/>
+            <uml:Realation sourceClass="Rectangle" targetClass="Color" type="COMPOSITION"/>
+            <uml:Realation sourceClass="Rectangle" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Screen">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Screen">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="serialVersionUID" type="long"/>
+          <uml:Attribute name="width" type="int"/>
+          <uml:Attribute name="height" type="int"/>
+          <uml:Attribute name="shapes" type="Vector"/>
+          <uml:Operation name="add" returnType="void">
+            <uml:Parameter name="param" type="Shape"/>
+          </uml:Operation>
+          <uml:Operation name="paintComponent" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Operation name="getPreferredSize" returnType="Dimension"/>
+          <uml:Relations>
+            <uml:Realation sourceClass="Screen" targetClass="JPanel" type="EXTENSION"/>
+            <uml:Realation sourceClass="Screen" targetClass="Shape" type="AGGREGATION"/>
+            <uml:Realation sourceClass="Screen" targetClass="Shape" type="UTILISATION"/>
+            <uml:Realation sourceClass="Screen" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="ScreenFrame">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="ScreenFrame"/>
+          </uml:Constructors>
+          <uml:Attribute name="serialVersionUID" type="long"/>
+          <uml:Attribute name="screen" type="Screen"/>
+          <uml:Operation name="main" returnType="void">
+            <uml:Parameter name="param" type="String[]"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="ScreenFrame" targetClass="JFrame" type="EXTENSION"/>
+            <uml:Realation sourceClass="ScreenFrame" targetClass="Screen" type="COMPOSITION"/>
+            <uml:Realation sourceClass="ScreenFrame" targetClass="String[]" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Interface name="Shape">
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+        </uml:Interface>
+        <uml:Class name="Square">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Square">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Square">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="x" type="int"/>
+          <uml:Attribute name="y" type="int"/>
+          <uml:Attribute name="with" type="int"/>
+          <uml:Attribute name="color" type="Color"/>
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="Square" targetClass="Shape" type="IMPLEMENTATION"/>
+            <uml:Realation sourceClass="Square" targetClass="Color" type="COMPOSITION"/>
+            <uml:Realation sourceClass="Square" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Test2">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Test2"/>
+            <uml:Constuctor modifier="public" name="Test2">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="max" type="int"/>
+          <uml:Attribute name="w" type="String"/>
+          <uml:Operation name="testProperties" returnType="void"/>
+          <uml:Operation name="testHashTable" returnType="void"/>
+          <uml:Operation name="testTreeMap" returnType="void"/>
+          <uml:Operation name="testHashMap" returnType="void"/>
+          <uml:Relations>
+            <uml:Realation sourceClass="Test2" targetClass="String" type="COMPOSITION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Tests">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Tests"/>
+            <uml:Constuctor modifier="public" name="Tests">
+              <uml:Parameters>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="max" type="int"/>
+          <uml:Attribute name="w" type="String"/>
+          <uml:Operation name="testStringBuilder" returnType="void"/>
+          <uml:Operation name="testArrayList" returnType="void"/>
+          <uml:Operation name="testLinkedList" returnType="void"/>
+          <uml:Operation name="testVector" returnType="void"/>
+          <uml:Operation name="testString" returnType="void"/>
+          <uml:Operation name="testStringBuffer" returnType="void"/>
+          <uml:Relations>
+            <uml:Realation sourceClass="Tests" targetClass="String" type="COMPOSITION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="TimeProcessing">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="TimeProcessing"/>
+          </uml:Constructors>
+          <uml:Operation name="run" returnType="void">
+            <uml:Parameter name="param" type="Object"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="TimeProcessing" targetClass="Object" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+        <uml:Class name="Triangle">
+          <uml:Constructors>
+            <uml:Constuctor modifier="public" name="Triangle">
+              <uml:Parameters>
+                <uml:Parameter type="int[]"/>
+                <uml:Parameter type="int[]"/>
+                <uml:Parameter type="int"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+            <uml:Constuctor modifier="public" name="Triangle">
+              <uml:Parameters>
+                <uml:Parameter type="int[]"/>
+                <uml:Parameter type="int[]"/>
+                <uml:Parameter type="int"/>
+                <uml:Parameter type="Color"/>
+              </uml:Parameters>
+            </uml:Constuctor>
+          </uml:Constructors>
+          <uml:Attribute name="x" type="int[]"/>
+          <uml:Attribute name="y" type="int[]"/>
+          <uml:Attribute name="with" type="int"/>
+          <uml:Attribute name="height" type="int"/>
+          <uml:Attribute name="color" type="Color"/>
+          <uml:Operation name="paint" returnType="void">
+            <uml:Parameter name="param" type="Graphics"/>
+          </uml:Operation>
+          <uml:Relations>
+            <uml:Realation sourceClass="Triangle" targetClass="Shape" type="IMPLEMENTATION"/>
+            <uml:Realation sourceClass="Triangle" targetClass="Color" type="COMPOSITION"/>
+            <uml:Realation sourceClass="Triangle" targetClass="Graphics" type="UTILISATION"/>
+          </uml:Relations>
+        </uml:Class>
+      </uml:Package>
+    </uml:Packages>
+  </uml:Project>
+</xmi:XMI>

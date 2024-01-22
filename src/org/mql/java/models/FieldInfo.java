@@ -2,10 +2,12 @@ package org.mql.java.models;
 
 public class FieldInfo {
     private String fieldName;
+    private String fieldModifier;
     private String fieldType;
 
-    public FieldInfo(String fieldName, String fieldType) {
+    public FieldInfo(String fieldName, String fieldModifier, String fieldType) {
         this.fieldName = fieldName;
+        this.fieldModifier = fieldModifier;
         this.fieldType = fieldType;
     }
 
@@ -16,4 +18,12 @@ public class FieldInfo {
     public String getFieldType() {
         return fieldType;
     }
+
+	public String getFieldModifier() {
+		return fieldModifier;
+	}
+
+	public void setFieldModifier(String fieldModifier) {
+		this.fieldModifier = fieldModifier;
+	}
 }

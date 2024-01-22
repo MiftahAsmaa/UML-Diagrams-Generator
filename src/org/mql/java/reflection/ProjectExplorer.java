@@ -1,8 +1,8 @@
 package org.mql.java.reflection;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import org.mql.java.models.PackageInfo;
 import org.mql.java.models.ProjectInfo;
@@ -27,7 +27,7 @@ public class ProjectExplorer {
 		 return null;
 	    }
 	 private static List<PackageInfo> getPackages(File projectRoot, String projectPath) {
-	        List<PackageInfo> packageEntities = new ArrayList<>();
+	        List<PackageInfo> packageEntities = new Vector<>();
 	        findPackages(projectRoot, packageEntities, projectPath, "");
 	        return packageEntities;
 	    }

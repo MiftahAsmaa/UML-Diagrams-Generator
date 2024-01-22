@@ -1,8 +1,6 @@
 package org.mql.java.models;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class ClassInfo{
 
@@ -10,8 +8,8 @@ public class ClassInfo{
 	   private String classType;
 	    private List<FieldInfo> fields;
 	    private List<MethodInfo> methods;
-	    private Map<String, String> relations= new HashMap<>();
-
+	    private List<ConstructorInfo> constructors;
+	    private List<RelationInfo> relations;
 	   
 		public ClassInfo(String className,String classType, List<FieldInfo> fields, List<MethodInfo> methods) {
 			this.className = className;
@@ -19,17 +17,22 @@ public class ClassInfo{
 	        this.fields = fields;
 	        this.setMethods(methods);
 		}
-
-
-		public void addRelation(String className, String relationType) {
-			relations.put(className, relationType);
+		public ClassInfo(String className,String classType, List<FieldInfo> fields, List<MethodInfo> methods,List<ConstructorInfo> constructors) {
+			this.className = className;
+			this.setClassType(classType);
+	        this.fields = fields;
+	        this.setMethods(methods);
+	        this.constructors=constructors;
 		}
-		
-		public void displayRelations() {
-			for (Map.Entry<String, String> entry : relations.entrySet()) {
-				System.out.println("   " + entry.getValue() + ": " + entry.getKey());
-			}
+		public ClassInfo(String className,String classType, List<FieldInfo> fields, List<MethodInfo> methods,List<ConstructorInfo> constructors,List<RelationInfo> relations) {
+			this.className = className;
+			this.setClassType(classType);
+	        this.fields = fields;
+	        this.setMethods(methods);
+	        this.constructors=constructors;
+	        this.relations = relations;
 		}
+	
 	
 		public List<FieldInfo> getFields() {
 			return fields;
@@ -66,6 +69,16 @@ public class ClassInfo{
 		public void setClassType(String classType) {
 			this.classType = classType;
 		}
-	
-
+		public List<ConstructorInfo> getConstructors() {
+			return constructors;
+		}
+		public void setConstructors(List<ConstructorInfo> constructors) {
+			this.constructors = constructors;
+		}
+		public List<RelationInfo> getRelations2() {
+			return relations;
+		}
+		public void setRelations2(List<RelationInfo> relations2) {
+			this.relations = relations2;
+		}
 }

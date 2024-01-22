@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  <name>p01-revision</name>
+  <packages>
+    <package name="org.mql.java.reef">
+      <Enum name="enuuuum">
+        <constructors>
+          <constuctor modifier="private" name="enuuuum">
+            <parameters>
+              <parameter type="String"/>
+              <parameter type="int"/>
+              <parameter type="String"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="public static final" name="VALUE1" type="enuuuum"/>
+          <field modifier="public static final" name="VALUE2" type="enuuuum"/>
+          <field modifier="public static final" name="VALUE3" type="enuuuum"/>
+          <field modifier="private final" name="description" type="String"/>
+          <field modifier="private static final" name="ENUM$VALUES" type="enuuuum[]"/>
+        </fields>
+        <methods>
+          <method modifier="public static" name="main" returnType="void">
+            <parameters>
+              <parameter type="String[]"/>
+            </parameters>
+          </method>
+          <method modifier="public static" name="values" returnType="enuuuum[]"/>
+          <method modifier="public static" name="valueOf" returnType="enuuuum">
+            <parameters>
+              <parameter type="String"/>
+            </parameters>
+          </method>
+          <method modifier="public" name="getDescription" returnType="String"/>
+        </methods>
+      </Enum>
+      <Interface name="inter"/>
+    </package>
+    <package name="org.mql.java.revision">
+      <Class name="Circle">
+        <constructors>
+          <constuctor modifier="public" name="Circle">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Circle">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Circle">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="x" type="int"/>
+          <field modifier="private" name="y" type="int"/>
+          <field modifier="private" name="r" type="int"/>
+          <field modifier="private" name="color" type="Color"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Circle" targetClass="Shape" type="IMPLEMENTATION"/>
+          <Realation sourceClass="Circle" targetClass="Color" type="COMPOSITION"/>
+          <Realation sourceClass="Circle" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Examples">
+        <constructors>
+          <constuctor modifier="public" name="Examples"/>
+        </constructors>
+        <methods>
+          <method modifier="public static" name="main" returnType="void">
+            <parameters>
+              <parameter type="String[]"/>
+            </parameters>
+          </method>
+          <method modifier="" name="exp01" returnType="void"/>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Examples" targetClass="String[]" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Ligne">
+        <constructors>
+          <constuctor modifier="public" name="Ligne">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Ligne">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="x" type="int"/>
+          <field modifier="private" name="y" type="int"/>
+          <field modifier="private" name="with" type="int"/>
+          <field modifier="private" name="height" type="int"/>
+          <field modifier="private" name="color" type="Color"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Ligne" targetClass="Shape" type="IMPLEMENTATION"/>
+          <Realation sourceClass="Ligne" targetClass="Color" type="COMPOSITION"/>
+          <Realation sourceClass="Ligne" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Oval">
+        <constructors>
+          <constuctor modifier="public" name="Oval">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Oval">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="x" type="int"/>
+          <field modifier="private" name="y" type="int"/>
+          <field modifier="private" name="width" type="int"/>
+          <field modifier="private" name="height" type="int"/>
+          <field modifier="private" name="color" type="Color"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Oval" targetClass="Shape" type="IMPLEMENTATION"/>
+          <Realation sourceClass="Oval" targetClass="Color" type="COMPOSITION"/>
+          <Realation sourceClass="Oval" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Rectangle">
+        <constructors>
+          <constuctor modifier="public" name="Rectangle">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Rectangle">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="x" type="int"/>
+          <field modifier="private" name="y" type="int"/>
+          <field modifier="private" name="with" type="int"/>
+          <field modifier="private" name="height" type="int"/>
+          <field modifier="private" name="color" type="Color"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Rectangle" targetClass="Shape" type="IMPLEMENTATION"/>
+          <Realation sourceClass="Rectangle" targetClass="Color" type="COMPOSITION"/>
+          <Realation sourceClass="Rectangle" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Screen">
+        <constructors>
+          <constuctor modifier="public" name="Screen">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private static final" name="serialVersionUID" type="long"/>
+          <field modifier="private" name="width" type="int"/>
+          <field modifier="private" name="height" type="int"/>
+          <field modifier="private" name="shapes" type="Vector"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="add" returnType="void">
+            <parameters>
+              <parameter type="Shape"/>
+            </parameters>
+          </method>
+          <method modifier="protected" name="paintComponent" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+          <method modifier="public" name="getPreferredSize" returnType="Dimension"/>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Screen" targetClass="JPanel" type="EXTENSION"/>
+          <Realation sourceClass="Screen" targetClass="Shape" type="AGGREGATION"/>
+          <Realation sourceClass="Screen" targetClass="Shape" type="UTILISATION"/>
+          <Realation sourceClass="Screen" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="ScreenFrame">
+        <constructors>
+          <constuctor modifier="public" name="ScreenFrame"/>
+        </constructors>
+        <fields>
+          <field modifier="private static final" name="serialVersionUID" type="long"/>
+          <field modifier="private" name="screen" type="Screen"/>
+        </fields>
+        <methods>
+          <method modifier="public static" name="main" returnType="void">
+            <parameters>
+              <parameter type="String[]"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="ScreenFrame" targetClass="JFrame" type="EXTENSION"/>
+          <Realation sourceClass="ScreenFrame" targetClass="Screen" type="COMPOSITION"/>
+          <Realation sourceClass="ScreenFrame" targetClass="String[]" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Interface name="Shape">
+        <methods>
+          <method modifier="public abstract" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+      </Interface>
+      <Class name="Square">
+        <constructors>
+          <constuctor modifier="public" name="Square">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Square">
+            <parameters>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="x" type="int"/>
+          <field modifier="private" name="y" type="int"/>
+          <field modifier="private" name="with" type="int"/>
+          <field modifier="private" name="color" type="Color"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Square" targetClass="Shape" type="IMPLEMENTATION"/>
+          <Realation sourceClass="Square" targetClass="Color" type="COMPOSITION"/>
+          <Realation sourceClass="Square" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Test2">
+        <constructors>
+          <constuctor modifier="public" name="Test2"/>
+          <constuctor modifier="public" name="Test2">
+            <parameters>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="max" type="int"/>
+          <field modifier="private" name="w" type="String"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="testProperties" returnType="void"/>
+          <method modifier="public" name="testHashTable" returnType="void"/>
+          <method modifier="public" name="testTreeMap" returnType="void"/>
+          <method modifier="public" name="testHashMap" returnType="void"/>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Test2" targetClass="String" type="COMPOSITION"/>
+        </Relations>
+      </Class>
+      <Class name="Tests">
+        <constructors>
+          <constuctor modifier="public" name="Tests"/>
+          <constuctor modifier="public" name="Tests">
+            <parameters>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="max" type="int"/>
+          <field modifier="private" name="w" type="String"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="testStringBuilder" returnType="void"/>
+          <method modifier="public" name="testArrayList" returnType="void"/>
+          <method modifier="public" name="testLinkedList" returnType="void"/>
+          <method modifier="public" name="testVector" returnType="void"/>
+          <method modifier="public" name="testString" returnType="void"/>
+          <method modifier="public" name="testStringBuffer" returnType="void"/>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Tests" targetClass="String" type="COMPOSITION"/>
+        </Relations>
+      </Class>
+      <Class name="TimeProcessing">
+        <constructors>
+          <constuctor modifier="public" name="TimeProcessing"/>
+        </constructors>
+        <methods>
+          <method modifier="public" name="run" returnType="void">
+            <parameters>
+              <parameter type="Object"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="TimeProcessing" targetClass="Object" type="UTILISATION"/>
+        </Relations>
+      </Class>
+      <Class name="Triangle">
+        <constructors>
+          <constuctor modifier="public" name="Triangle">
+            <parameters>
+              <parameter type="int[]"/>
+              <parameter type="int[]"/>
+              <parameter type="int"/>
+            </parameters>
+          </constuctor>
+          <constuctor modifier="public" name="Triangle">
+            <parameters>
+              <parameter type="int[]"/>
+              <parameter type="int[]"/>
+              <parameter type="int"/>
+              <parameter type="Color"/>
+            </parameters>
+          </constuctor>
+        </constructors>
+        <fields>
+          <field modifier="private" name="x" type="int[]"/>
+          <field modifier="private" name="y" type="int[]"/>
+          <field modifier="private" name="with" type="int"/>
+          <field modifier="private" name="height" type="int"/>
+          <field modifier="private" name="color" type="Color"/>
+        </fields>
+        <methods>
+          <method modifier="public" name="paint" returnType="void">
+            <parameters>
+              <parameter type="Graphics"/>
+            </parameters>
+          </method>
+        </methods>
+        <Relations>
+          <Realation sourceClass="Triangle" targetClass="Shape" type="IMPLEMENTATION"/>
+          <Realation sourceClass="Triangle" targetClass="Color" type="COMPOSITION"/>
+          <Realation sourceClass="Triangle" targetClass="Graphics" type="UTILISATION"/>
+        </Relations>
+      </Class>
+    </package>
+  </packages>
+</project>
