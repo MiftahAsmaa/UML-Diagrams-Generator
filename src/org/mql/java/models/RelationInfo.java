@@ -23,14 +23,11 @@ public class RelationInfo {
         this.targetClass = targetClass;
     }
 
-<<<<<<< HEAD
     
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-=======
->>>>>>> ddb01e3b545d8fa4f30c6f4d282c81730d8d9c37
 	public String getDescription() {
 	    switch (this.type) {
 	        case AGGREGATION:
@@ -50,9 +47,7 @@ public class RelationInfo {
 	            return null; 
 	    }
 	}
-    public void setDescription(String description) {
-		this.description = description;
-	}
+
 
     public RelationType getType() {
 		return type;
