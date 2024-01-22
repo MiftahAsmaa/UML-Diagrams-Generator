@@ -35,7 +35,7 @@ public class ClassExplorer {
 		        ClassInfo classInfo = new ClassInfo(className,classType, fields, methods,constructorsNames);
 		        
 		        if(!classe.isAnnotation() && !classe.isEnum() && !classe.isInterface()) {
-	            	classInfo.setRelations2(getRelations(classe));
+	            		classInfo.setRelations2(getRelations(classe));
 		        }
         return classInfo;
     }
