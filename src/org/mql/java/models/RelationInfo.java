@@ -23,19 +23,6 @@ public class RelationInfo {
         this.targetClass = targetClass;
     }
 
-    public void display() {
-        System.out.println("----------------------");
-        System.out.println("Type: " + type);
-        System.out.println("Source Class: " + sourceClass);
-        System.out.println("Target Class: " + targetClass);
-        System.out.println("Description: " + description);
-        System.out.println("----------------------");
-    }
-    
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
 	public String getDescription() {
 	    switch (this.type) {
 	        case AGGREGATION:
@@ -55,7 +42,9 @@ public class RelationInfo {
 	            return null; 
 	    }
 	}
-
+    public void setDescription(String description) {
+		this.description = description;
+	}
 
     public RelationType getType() {
 		return type;
