@@ -275,10 +275,10 @@
           </uml:Constructors>
           <uml:Attribute name="max" type="int"/>
           <uml:Attribute name="w" type="String"/>
-          <uml:Operation name="testHashMap" returnType="void"/>
           <uml:Operation name="testTreeMap" returnType="void"/>
-          <uml:Operation name="testHashTable" returnType="void"/>
           <uml:Operation name="testProperties" returnType="void"/>
+          <uml:Operation name="testHashMap" returnType="void"/>
+          <uml:Operation name="testHashTable" returnType="void"/>
           <uml:Relations>
             <uml:Realation sourceClass="Test2" targetClass="String" type="COMPOSITION"/>
           </uml:Relations>
@@ -294,12 +294,12 @@
           </uml:Constructors>
           <uml:Attribute name="max" type="int"/>
           <uml:Attribute name="w" type="String"/>
-          <uml:Operation name="testString" returnType="void"/>
-          <uml:Operation name="testArrayList" returnType="void"/>
-          <uml:Operation name="testLinkedList" returnType="void"/>
-          <uml:Operation name="testStringBuilder" returnType="void"/>
           <uml:Operation name="testStringBuffer" returnType="void"/>
+          <uml:Operation name="testLinkedList" returnType="void"/>
+          <uml:Operation name="testArrayList" returnType="void"/>
           <uml:Operation name="testVector" returnType="void"/>
+          <uml:Operation name="testString" returnType="void"/>
+          <uml:Operation name="testStringBuilder" returnType="void"/>
           <uml:Relations>
             <uml:Realation sourceClass="Tests" targetClass="String" type="COMPOSITION"/>
           </uml:Relations>

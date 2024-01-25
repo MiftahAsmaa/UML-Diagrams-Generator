@@ -28,7 +28,7 @@ public class RelationInfo {
 		this.description = description;
 	}
 
-	public String getDescription() {
+	public String getDescription( ) {
 	    switch (this.type) {
 	        case AGGREGATION:
 	            return String.format(type + " Class %s is aggregated with class %s.", sourceClass, targetClass);

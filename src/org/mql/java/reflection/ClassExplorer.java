@@ -35,7 +35,7 @@ public class ClassExplorer {
 		        ClassInfo classInfo = new ClassInfo(className,classType, fields, methods,constructorsNames);
 		        
 		        if(!classe.isAnnotation() && !classe.isEnum() && !classe.isInterface()) {
-	            		classInfo.setRelations2(getRelations(classe));
+	            		classInfo.setRelations(getRelations(classe));
 		        }
         return classInfo;
     }
@@ -169,17 +169,6 @@ public class ClassExplorer {
         return constructorInfos;
     }
 
-//    public static String getSuperClass(Class<?> classe) {
-//	    if (classe != null) {
-//	    	if(classe.getSuperclass() != null && !classe.getSuperclass().getSimpleName().equals("Object")) {
-//	    		return classe.getSuperclass().getSimpleName();
-//	    	}else {
-//				return null;
-//			}
-//	    } else {
-//	        return null;
-//	    }
-//	}
     public static String getClassType(Class<?> className) {
         try {
             if (className.isInterface()) {

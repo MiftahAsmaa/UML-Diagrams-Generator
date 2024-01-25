@@ -10,6 +10,8 @@ public class ClassInfo{
 	    private List<MethodInfo> methods;
 	    private List<ConstructorInfo> constructors;
 	    private List<RelationInfo> relations;
+	    private List<ClassInfo> relatedClasses; 
+
 	   
 		public ClassInfo(String className,String classType, List<FieldInfo> fields, List<MethodInfo> methods) {
 			this.className = className;
@@ -34,6 +36,7 @@ public class ClassInfo{
 		}
 	
 	
+		
 		public List<FieldInfo> getFields() {
 			return fields;
 		}
@@ -75,10 +78,16 @@ public class ClassInfo{
 		public void setConstructors(List<ConstructorInfo> constructors) {
 			this.constructors = constructors;
 		}
-		public List<RelationInfo> getRelations2() {
+		public List<RelationInfo> getRelations() {
 			return relations;
 		}
-		public void setRelations2(List<RelationInfo> relations2) {
-			this.relations = relations2;
+		public void setRelations(List<RelationInfo> relations) {
+			this.relations = relations;
+		}
+		public List<ClassInfo> getRelatedClasses() {
+			return relatedClasses;
+		}
+		public void setRelatedClasses(List<ClassInfo> relatedClasses) {
+			this.relatedClasses = relatedClasses;
 		}
 }

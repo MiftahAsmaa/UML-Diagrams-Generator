@@ -7,6 +7,7 @@ import org.mql.java.models.PackageInfo;
 import org.mql.java.models.ProjectInfo;
 import org.mql.java.models.RelationInfo;
 import org.mql.java.reflection.ProjectExplorer;
+import org.mql.java.ui.Swing;
 import org.mql.java.xml.XMIWriter;
 import org.mql.java.xml.XMLWriter;
 
@@ -16,16 +17,16 @@ public class Examples {
 		exp01();
 	}
 
-
-	public void exp01() {
+	void exp01() {
 		ProjectInfo project = ProjectExplorer.parseProject("D:\\Work-Space-Home\\p01-revision");
 		displayProject(project);
-
-        XMLWriter.writeProjectToXML(project, "resources/output.xml");
+		String xmlPath="resources/output.xml";
+        XMLWriter.writeProjectToXML(project, xmlPath);
 		XMIWriter.writeProjectToXMI(project, "resources/outputxmi.xmi");
+		new Swing(xmlPath);
 	}
-	
-	public void displayProject(ProjectInfo project) {
+
+	void displayProject(ProjectInfo project) {
 		List<PackageInfo> packages = project.getPackages();
         System.out.println("Projet : " + project.getProjectName());
 			for (PackageInfo packageE : packages) {
@@ -35,14 +36,14 @@ public class Examples {
 					for (ClassInfo classE : classes) {
 						String className=classE.getClassName().substring(classE.getClassName().lastIndexOf('.') + 1);
 						System.out.println("\n\tClass: " + className + " type : "+ classE.getClassType());
-						//if("Class".equals(classE.getClassType())) {
+						if("Class".equals(classE.getClassType())) {
 						 System.out.print("\t\tRelations:\n");
-						 if(classE.getRelations2() != null) {
-								for (RelationInfo	r : classE.getRelations2()) {
+						 if(classE.getRelations() != null) {
+								for (RelationInfo	r : classE.getRelations()) {
 									System.out.println("\t\t\t"+r.getDescription());
 								}
 							}
-						//}
+						}
 				            System.out.println();
 				            if(!classE.getConstructors().isEmpty()) {
 				            	System.out.println("\t\tConstructors: ");

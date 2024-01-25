@@ -141,7 +141,7 @@ public class XMIWriter {
                 }
             }
             
-            List<RelationInfo> relations = classInfo.getRelations2();
+            List<RelationInfo> relations = classInfo.getRelations();
             if (relations != null && !relations.isEmpty()) {
                 Element relationsElement = doc.createElement("uml:Relations");
                 for (RelationInfo relationInfo : relations) {

@@ -80,6 +80,7 @@ public class XMLWriter {
             
             String className=classInfo.getClassName().substring(classInfo.getClassName().lastIndexOf('.') + 1);
             classElement.setAttribute("name", className);
+            classElement.setAttribute("type", classInfo.getClassType());
 
             List<ConstructorInfo> constructors = classInfo.getConstructors();
             if (constructors != null && !constructors.isEmpty()) {
@@ -143,7 +144,7 @@ public class XMLWriter {
                 classElement.appendChild(methodsElement);
             }
             
-            List<RelationInfo> relations = classInfo.getRelations2();
+            List<RelationInfo> relations = classInfo.getRelations();
             if (relations != null && !relations.isEmpty()) {
                 Element relationsElement = doc.createElement("Relations");
                 for (RelationInfo relationInfo : relations) {

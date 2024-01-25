@@ -3,7 +3,7 @@
   <name>p01-revision</name>
   <packages>
     <package name="org.mql.java.reef">
-      <Enum name="enuuuum">
+      <Enum name="enuuuum" type="Enum">
         <constructors>
           <constuctor modifier="private" name="enuuuum">
             <parameters>
@@ -35,10 +35,10 @@
           <method modifier="public" name="getDescription" returnType="String"/>
         </methods>
       </Enum>
-      <Interface name="inter"/>
+      <Interface name="inter" type="Interface"/>
     </package>
     <package name="org.mql.java.revision">
-      <Class name="Circle">
+      <Class name="Circle" type="Class">
         <constructors>
           <constuctor modifier="public" name="Circle">
             <parameters>
@@ -85,7 +85,7 @@
           <Realation sourceClass="Circle" targetClass="Graphics" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Examples">
+      <Class name="Examples" type="Class">
         <constructors>
           <constuctor modifier="public" name="Examples"/>
         </constructors>
@@ -101,7 +101,7 @@
           <Realation sourceClass="Examples" targetClass="String[]" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Ligne">
+      <Class name="Ligne" type="Class">
         <constructors>
           <constuctor modifier="public" name="Ligne">
             <parameters>
@@ -141,7 +141,7 @@
           <Realation sourceClass="Ligne" targetClass="Graphics" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Oval">
+      <Class name="Oval" type="Class">
         <constructors>
           <constuctor modifier="public" name="Oval">
             <parameters>
@@ -181,7 +181,7 @@
           <Realation sourceClass="Oval" targetClass="Graphics" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Rectangle">
+      <Class name="Rectangle" type="Class">
         <constructors>
           <constuctor modifier="public" name="Rectangle">
             <parameters>
@@ -221,7 +221,7 @@
           <Realation sourceClass="Rectangle" targetClass="Graphics" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Screen">
+      <Class name="Screen" type="Class">
         <constructors>
           <constuctor modifier="public" name="Screen">
             <parameters>
@@ -256,7 +256,7 @@
           <Realation sourceClass="Screen" targetClass="Graphics" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="ScreenFrame">
+      <Class name="ScreenFrame" type="Class">
         <constructors>
           <constuctor modifier="public" name="ScreenFrame"/>
         </constructors>
@@ -277,7 +277,7 @@
           <Realation sourceClass="ScreenFrame" targetClass="String[]" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Interface name="Shape">
+      <Interface name="Shape" type="Interface">
         <methods>
           <method modifier="public abstract" name="paint" returnType="void">
             <parameters>
@@ -286,7 +286,7 @@
           </method>
         </methods>
       </Interface>
-      <Class name="Square">
+      <Class name="Square" type="Class">
         <constructors>
           <constuctor modifier="public" name="Square">
             <parameters>
@@ -323,7 +323,7 @@
           <Realation sourceClass="Square" targetClass="Graphics" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Test2">
+      <Class name="Test2" type="Class">
         <constructors>
           <constuctor modifier="public" name="Test2"/>
           <constuctor modifier="public" name="Test2">
@@ -337,16 +337,16 @@
           <field modifier="private" name="w" type="String"/>
         </fields>
         <methods>
-          <method modifier="public" name="testHashMap" returnType="void"/>
           <method modifier="public" name="testTreeMap" returnType="void"/>
-          <method modifier="public" name="testHashTable" returnType="void"/>
           <method modifier="public" name="testProperties" returnType="void"/>
+          <method modifier="public" name="testHashMap" returnType="void"/>
+          <method modifier="public" name="testHashTable" returnType="void"/>
         </methods>
         <Relations>
           <Realation sourceClass="Test2" targetClass="String" type="COMPOSITION"/>
         </Relations>
       </Class>
-      <Class name="Tests">
+      <Class name="Tests" type="Class">
         <constructors>
           <constuctor modifier="public" name="Tests"/>
           <constuctor modifier="public" name="Tests">
@@ -360,18 +360,18 @@
           <field modifier="private" name="w" type="String"/>
         </fields>
         <methods>
-          <method modifier="public" name="testString" returnType="void"/>
-          <method modifier="public" name="testArrayList" returnType="void"/>
-          <method modifier="public" name="testLinkedList" returnType="void"/>
-          <method modifier="public" name="testStringBuilder" returnType="void"/>
           <method modifier="public" name="testStringBuffer" returnType="void"/>
+          <method modifier="public" name="testLinkedList" returnType="void"/>
+          <method modifier="public" name="testArrayList" returnType="void"/>
           <method modifier="public" name="testVector" returnType="void"/>
+          <method modifier="public" name="testString" returnType="void"/>
+          <method modifier="public" name="testStringBuilder" returnType="void"/>
         </methods>
         <Relations>
           <Realation sourceClass="Tests" targetClass="String" type="COMPOSITION"/>
         </Relations>
       </Class>
-      <Class name="TimeProcessing">
+      <Class name="TimeProcessing" type="Class">
         <constructors>
           <constuctor modifier="public" name="TimeProcessing"/>
         </constructors>
@@ -386,7 +386,7 @@
           <Realation sourceClass="TimeProcessing" targetClass="Object" type="UTILISATION"/>
         </Relations>
       </Class>
-      <Class name="Triangle">
+      <Class name="Triangle" type="Class">
         <constructors>
           <constuctor modifier="public" name="Triangle">
             <parameters>

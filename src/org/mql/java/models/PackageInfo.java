@@ -12,12 +12,16 @@ public class PackageInfo {
         this.classes = classes;
         this.setSubPackages(subPackages);
     }
-    public PackageInfo(String packageName, List<ClassInfo> classes) {
+   
+	public PackageInfo(String packageName, List<ClassInfo> classes) {
         this.setPackageName(packageName);
         this.classes = classes;
     }
 
-    public String getPackageName() {
+    public PackageInfo(String packageName) {
+        this.setPackageName(packageName);
+	}
+	public String getPackageName() {
     	return packageName;
     }
     public void setPackageName(String packageName) {
@@ -36,8 +40,6 @@ public class PackageInfo {
 	}
 	public void setSubPackages(List<PackageInfo> subPackages) {
 		this.subPackages = subPackages;
-	}
-
-	
+	}	
 
 }

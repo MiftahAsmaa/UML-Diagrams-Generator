@@ -38,7 +38,6 @@ public class PackageExplorer {
 
 	        bin = bin.endsWith(File.separator + "bin") ? bin : bin + File.separator + "bin";
 
-	        @SuppressWarnings("resource")
 			URLClassLoader urlClassLoader = new URLClassLoader(
 	                new URL[]{new File(bin).toURI().toURL()},
 	                classLoader
@@ -67,5 +66,4 @@ public class PackageExplorer {
 	    }
 	    return classInfos;
 	}
-	
 }

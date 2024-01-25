@@ -15,17 +15,19 @@ public class MethodInfo {
         this.parameters = parameters;
     }
 
-    public String getMethodName() {
-        return methodName;
-    }
+	public MethodInfo(String methodName,String methodModifier, String returnType) {
+		this.methodName = methodName;
+        this.methodModifier = methodModifier;
+        this.returnType = returnType;
+        }
 
-    public String getReturnType() {
-        return returnType;
-    }
+	public String getMethodName() {
+		return methodName;
+	}
 
-    public List<String> getParameters() {
-        return parameters;
-    }
+	public void setMethodName(String methodName) {
+		this.methodName = methodName;
+	}
 
 	public String getMethodModifier() {
 		return methodModifier;
@@ -34,4 +36,23 @@ public class MethodInfo {
 	public void setMethodModifier(String methodModifier) {
 		this.methodModifier = methodModifier;
 	}
+
+	public String getReturnType() {
+		return returnType;
+	}
+
+	public void setReturnType(String returnType) {
+		this.returnType = returnType;
+	}
+
+	public List<String> getParameters() {
+		return parameters;
+	}
+
+	public void setParameters(List<String> parameters) {
+		this.parameters = parameters;
+	}
+
+
+	
 }
